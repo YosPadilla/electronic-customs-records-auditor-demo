@@ -1,0 +1,13 @@
+{
+  "total": 20,
+  "archives_found": 19,
+  "counts": {
+    "COMPLETE": 12,
+    "INCOMPLETE": 5,
+    "REVIEW": 2,
+    "NOT FOUND": 1
+  },
+  "elapsed_seconds": 4.643,
+  "generated_at": "2026-11-08 09:27:16",
+  "boundary": "Sandbox portfolio simulation using synthetic customs records only."
+}
