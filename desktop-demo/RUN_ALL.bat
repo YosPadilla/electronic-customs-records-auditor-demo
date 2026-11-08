@@ -36,13 +36,13 @@ if "%PYMODE%"=="PYLAUNCHER" (
   py -3 -u setup_recording.py
   set "SETUP_RC=!ERRORLEVEL!"
   if not "!SETUP_RC!"=="0" goto :SETUP_ERROR
-  py -3 -u desktop_orchestrator.py
+  py -3 -u workflow_runner.py
   set "RC=!ERRORLEVEL!"
 ) else (
   python -u setup_recording.py
   set "SETUP_RC=!ERRORLEVEL!"
   if not "!SETUP_RC!"=="0" goto :SETUP_ERROR
-  python -u desktop_orchestrator.py
+  python -u workflow_runner.py
   set "RC=!ERRORLEVEL!"
 )
 
