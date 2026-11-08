@@ -26,12 +26,12 @@ if not defined PYMODE goto :NO_PYTHON
 if "%PYMODE%"=="PYLAUNCHER" (
   py -3 -u setup_recording.py --screenshots-only
   if errorlevel 1 goto :ERROR
-  py -3 -u desktop_orchestrator.py
+  py -3 -u workflow_runner.py
   set "RC=!ERRORLEVEL!"
 ) else (
   python -u setup_recording.py --screenshots-only
   if errorlevel 1 goto :ERROR
-  python -u desktop_orchestrator.py
+  python -u workflow_runner.py
   set "RC=!ERRORLEVEL!"
 )
 if not "%RC%"=="0" goto :ERROR
