@@ -1,0 +1,21 @@
+ROW,EXPEDIENTE,PEDIMENTO,OPERATION,STATUS,PAID_DECLARATION,INVOICES_EXPECTED,INVOICES_FOUND,DODA,EXPENSE_ACCOUNT,EVIDENCE_COUNT,REASON
+1,3500-7000001,7000001,IMPORT,COMPLETE,YES,1,1,YES,YES,4,Critical evidence matched: paid declaration and expected commercial invoice(s).
+2,3500-7000002,7000002,IMPORT,COMPLETE,YES,1,1,YES,YES,4,Critical evidence matched: paid declaration and expected commercial invoice(s).
+3,3500-7000003,7000003,IMPORT,COMPLETE,YES,1,1,YES,NO,3,Critical evidence matched: paid declaration and expected commercial invoice(s).
+4,3500-7000004,7000004,IMPORT,COMPLETE,YES,2,2,YES,YES,6,Critical evidence matched: paid declaration and expected commercial invoice(s).
+5,3500-7000005,7000005,IMPORT,COMPLETE,YES,1,1,YES,YES,4,Critical evidence matched: paid declaration and expected commercial invoice(s).
+6,3500-7000006,7000006,IMPORT,COMPLETE,YES,1,1,YES,NO,3,Critical evidence matched: paid declaration and expected commercial invoice(s).
+7,3500-7000007,7000007,IMPORT,COMPLETE,YES,1,1,YES,YES,4,Critical evidence matched: paid declaration and expected commercial invoice(s).
+8,3500-7000008,7000008,IMPORT,COMPLETE,YES,2,2,YES,YES,6,Critical evidence matched: paid declaration and expected commercial invoice(s).
+9,3500-7000009,7000009,IMPORT,COMPLETE,YES,1,1,YES,NO,3,Critical evidence matched: paid declaration and expected commercial invoice(s).
+10,3500-7000010,7000010,IMPORT,COMPLETE,YES,1,1,YES,YES,4,Critical evidence matched: paid declaration and expected commercial invoice(s).
+11,3500-7000011,7000011,IMPORT,COMPLETE,YES,1,1,YES,YES,4,Critical evidence matched: paid declaration and expected commercial invoice(s).
+12,3500-7000012,7000012,IMPORT,COMPLETE,YES,2,2,YES,NO,5,Critical evidence matched: paid declaration and expected commercial invoice(s).
+13,3500-7000013,7000013,IMPORT,INCOMPLETE,YES,1,0,YES,YES,3,Missing 1 expected commercial invoice(s): FAC-013.
+14,3500-7000014,7000014,IMPORT,INCOMPLETE,NO,1,1,YES,YES,3,Paid customs declaration is missing.
+15,3500-7000015,7000015,IMPORT,INCOMPLETE,YES,2,1,YES,NO,3,Missing 1 expected commercial invoice(s): FAC-015-B.
+16,3500-7000016,7000016,IMPORT,INCOMPLETE,YES,1,0,YES,YES,4,Missing 1 expected commercial invoice(s): FAC-016.
+17,3500-7000017,7000017,IMPORT,INCOMPLETE,NO,1,1,YES,YES,3,Paid customs declaration is missing.
+18,3500-7000018,7000018,IMPORT,REVIEW,YES,1,0,YES,NO,3,Commercial evidence detected without a reliable invoice identifier.
+19,3500-7000019,7000019,IMPORT,REVIEW,YES,1,0,YES,YES,4,Commercial evidence detected without a reliable invoice identifier.
+20,3500-7000020,7000020,IMPORT,NOT FOUND,NO,1,0,NO,NO,0,No archive found for the expected customs record.
