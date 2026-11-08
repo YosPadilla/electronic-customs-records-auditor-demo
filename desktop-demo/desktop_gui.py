@@ -15,8 +15,8 @@ DONE=OUTPUT/'.desktop_demo_complete'
 TITLE='Electronic Customs Records Auditor'
 
 class App:
-    def __init__(self, root, director=False):
-        self.root=root; self.director=director; self.q=queue.Queue(); self.results={}; self.stage_labels=[]; self.overlay=None
+    def __init__(self, root, guided=False):
+        self.root=root; self.guided=guided; self.q=queue.Queue(); self.results={}; self.stage_labels=[]; self.overlay=None
         root.title(TITLE); root.geometry('1440x860'); root.minsize(1180,760)
         try: root.state('zoomed')
         except Exception: pass
@@ -288,16 +288,16 @@ class App:
         self._set_stage(4)
         self.run_btn.config(state='normal'); self.append_log('Exports generated: XLSX · CSV · evidence map · audit log.')
         DONE.write_text(json.dumps(s,indent=2),encoding='utf-8')
-        if not self.director: messagebox.showinfo('Audit complete','20 records processed.\n\nResults were written to the output folder.')
+        if not self.guided: messagebox.showinfo('Audit complete','20 records processed.\n\nResults were written to the output folder.')
 
     def open_output(self):
         import os; os.startfile(str(OUTPUT))
 
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument('--director',action='store_true'); a=ap.parse_args()
+    ap=argparse.ArgumentParser(); ap.add_argument('--guided',action='store_true'); a=ap.parse_args()
     OUTPUT.mkdir(exist_ok=True)
     for p in [READY,DONE]:
         try:p.unlink()
         except Exception:pass
-    root=tk.Tk(); App(root,a.director); root.mainloop()
+    root=tk.Tk(); App(root,a.guided); root.mainloop()
 if __name__=='__main__': main()
