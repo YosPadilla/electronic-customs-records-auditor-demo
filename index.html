@@ -17,6 +17,7 @@
     <nav>
       <a href="#workflow">Workflow</a>
       <a href="#report">Report</a>
+      <a href="#technology">Technology</a>
       <a href="#architecture">Architecture</a>
       <a class="github" href="https://github.com/YosPadilla/electronic-customs-records-auditor-demo">GitHub</a>
     </nav>
@@ -68,6 +69,23 @@
         <article><b>03</b><h3>Verify</h3><p>Check the paid declaration and expected commercial invoice references.</p></article>
         <article><b>04</b><h3>Route</h3><p>Assign COMPLETE, INCOMPLETE, REVIEW or NOT FOUND based on evidence quality.</p></article>
         <article><b>05</b><h3>Export</h3><p>Write traceable XLSX, CSV, evidence-map and audit-log outputs.</p></article>
+      </div>
+    </section>
+
+
+    <section class="technology shell" id="technology">
+      <div class="section-copy">
+        <span class="eyebrow">TECHNOLOGY LAYER</span>
+        <h2>A transparent classifier built around evidence rules.</h2>
+        <p>The public reconstruction keeps the decision engine inspectable: archives are discovered, document signals are normalized, expected references are matched and uncertain evidence is routed instead of silently accepted.</p>
+      </div>
+      <div class="tech-grid">
+        <article><strong>Python</strong><span>Audit engine, workflow logic and desktop interface.</span></article>
+        <article><strong>ZIP + pathlib</strong><span>Archive discovery and compressed-record inspection.</span></article>
+        <article><strong>Regex + normalization</strong><span>Document classification and invoice-reference extraction.</span></article>
+        <article><strong>Evidence rules</strong><span>COMPLETE, INCOMPLETE, REVIEW and NOT FOUND routing.</span></article>
+        <article><strong>CSV · XLSX · JSON</strong><span>Traceable outputs for analyst follow-up and reporting.</span></article>
+        <article><strong>Professional extensions</strong><span>Recursive folders, ZIP/RAR, PDF/XML/TXT, OCR fallback with Tesseract, duplicate control and cross-document validation.</span></article>
       </div>
     </section>
 
