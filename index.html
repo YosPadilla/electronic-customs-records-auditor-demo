@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio-safe reconstruction of an electronic customs records audit workflow using Python, ZIP evidence inspection, exception routing and traceable Excel outputs." />
+  <meta name="theme-color" content="#071522" />
+  <title>Electronic Customs Records Auditor — Yoshio Padilla</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/app.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top"><span>YP</span><i>/LAB</i></a>
+    <nav>
+      <a href="#workflow">Workflow</a>
+      <a href="#report">Report</a>
+      <a href="#architecture">Architecture</a>
+      <a class="github" href="https://github.com/YosPadilla/electronic-customs-records-auditor-demo">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <span class="eyebrow">BUSINESS PROCESS AUTOMATION · CUSTOMS COMPLIANCE</span>
+        <h1>Electronic Customs<br/>Records Auditor</h1>
+        <p class="lead">A portfolio-safe reconstruction of a Python workflow that inspects compressed customs-record archives, maps documentary evidence, surfaces exceptions and produces traceable audit outputs.</p>
+        <div class="hero-actions">
+          <a class="primary" href="#video">Watch the workflow</a>
+          <a class="secondary" href="sample-output/CUSTOMS_AUDIT_RESULTS.xlsx">Open sample report</a>
+        </div>
+        <div class="metrics">
+          <div><strong>20</strong><span>records evaluated</span></div>
+          <div><strong>19</strong><span>archives located</span></div>
+          <div><strong>12</strong><span>complete</span></div>
+          <div><strong>8</strong><span>surfaced for follow-up</span></div>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="docs/media/hero.webp" alt="Final audit outcome scene" />
+        <span class="safe-badge">Synthetic portfolio data</span>
+      </div>
+    </section>
+
+    <section class="video-section shell" id="video">
+      <div class="section-copy">
+        <span class="eyebrow">DIRECTED WORKFLOW</span>
+        <h2>From fragmented evidence to an auditable result.</h2>
+        <p>The video follows the complete desktop sequence: source records, matched evidence, exception routing, batch processing, Excel reporting and the final operational outcome.</p>
+      </div>
+      <div class="video-frame">
+        <video controls preload="metadata" poster="docs/media/audit-complete.webp">
+          <source src="docs/media/electronic-customs-records-auditor-demo.mp4" type="video/mp4" />
+          Your browser does not support embedded video.
+        </video>
+      </div>
+    </section>
+
+    <section class="workflow shell" id="workflow">
+      <span class="eyebrow">WORKFLOW</span>
+      <h2>Evidence is classified before a record is closed.</h2>
+      <div class="flow-grid">
+        <article><b>01</b><h3>Locate</h3><p>Match the expected customs record to its compressed archive.</p></article>
+        <article><b>02</b><h3>Inspect</h3><p>Read the archive contents and classify documentary evidence.</p></article>
+        <article><b>03</b><h3>Verify</h3><p>Check the paid declaration and expected commercial invoice references.</p></article>
+        <article><b>04</b><h3>Route</h3><p>Assign COMPLETE, INCOMPLETE, REVIEW or NOT FOUND based on evidence quality.</p></article>
+        <article><b>05</b><h3>Export</h3><p>Write traceable XLSX, CSV, evidence-map and audit-log outputs.</p></article>
+      </div>
+    </section>
+
+    <section class="case shell">
+      <div class="case-card">
+        <img src="docs/media/evidence-match.webp" alt="Matched customs evidence example" />
+        <div><span class="eyebrow">EVIDENCE MATCH</span><h2>Close what can be supported.</h2><p>A record becomes COMPLETE when the critical documentary evidence can be matched reliably. Optional evidence remains visible without blocking a valid determination.</p></div>
+      </div>
+      <div class="case-card reverse">
+        <img src="docs/media/exception-review.webp" alt="Customs evidence requiring analyst review" />
+        <div><span class="eyebrow">EXCEPTION ROUTING</span><h2>Escalate uncertainty instead of hiding it.</h2><p>When commercial evidence exists but its identifier cannot be trusted, the workflow sends the record to REVIEW rather than forcing an automated pass/fail decision.</p></div>
+      </div>
+    </section>
+
+    <section class="report shell" id="report">
+      <div class="report-copy"><span class="eyebrow">TRACEABLE OUTPUT</span><h2>A report designed for follow-up.</h2><p>Each row represents one audited expediente. The report keeps the operational determination next to the evidence checks and a concise reason for the result.</p><a class="secondary" href="sample-output/CUSTOMS_AUDIT_RESULTS.xlsx">Download sample XLSX</a></div>
+      <img src="docs/media/report.webp" alt="Generated Excel audit report" />
+    </section>
+
+    <section class="architecture shell" id="architecture">
+      <span class="eyebrow">ARCHITECTURE</span>
+      <h2>Small components, clear responsibilities.</h2>
+      <div class="arch">
+        <div><strong>Synthetic audit universe</strong><span>XLSX / CSV</span></div><i>→</i>
+        <div><strong>Archive inspection</strong><span>ZIP + evidence classification</span></div><i>→</i>
+        <div><strong>Rule engine</strong><span>match + exception routing</span></div><i>→</i>
+        <div><strong>Desktop workflow</strong><span>Python / Tkinter</span></div><i>→</i>
+        <div><strong>Traceable outputs</strong><span>XLSX / CSV / logs</span></div>
+      </div>
+    </section>
+
+    <section class="boundary shell">
+      <span class="eyebrow">PUBLIC PORTFOLIO BOUNDARY</span>
+      <h2>Professional logic, synthetic records.</h2>
+      <p>This repository is a reconstruction for portfolio use. It contains no company credentials, production customs records, internal URLs or proprietary production source code. Identifiers and documents shown in the demo are synthetic.</p>
+    </section>
+  </main>
+
+  <footer><div class="shell"><strong>Yoshio Padilla</strong><span>Computer Systems Engineering · SAP · Business Process Automation · Data Analytics</span><a href="https://www.linkedin.com/in/yoshio-alberto-g-889804291/">LinkedIn</a></div></footer>
+</body>
+</html>
