@@ -3,7 +3,7 @@
 **Portfolio-safe reconstruction of a professional customs-document audit workflow.**  
 The project inspects compressed customs-record archives, classifies documentary evidence, matches expected references, routes exceptions and produces traceable audit outputs.
 
-**Python · ZIP evidence inspection · Business rules · Excel reporting · Process automation**
+**Python · ZIP evidence inspection · Regex classification · Business rules · Excel reporting · Process automation**
 
 > **Portfolio reconstruction:** this repository contains synthetic customs records only. It does not include company credentials, production customs documentation, internal URLs or proprietary production source code.
 
@@ -39,6 +39,22 @@ The repository includes the final edited portfolio walkthrough used to present t
 [**Watch the MP4 →**](docs/media/electronic-customs-records-auditor-demo.mp4)
 
 ![Audit running](docs/media/audit-running.webp)
+
+
+## Technology and classification approach
+
+The public reconstruction keeps the classifier intentionally small and inspectable. Its core uses:
+
+- **Python** for the audit engine and desktop workflow;
+- **pathlib + zipfile** for archive discovery and compressed-record inspection;
+- **regular expressions and text normalization** to detect document types and extract expected invoice identifiers;
+- **rule-based evidence matching** to distinguish COMPLETE, INCOMPLETE, REVIEW and NOT FOUND;
+- **CSV / XLSX / JSON** outputs for traceability and downstream review;
+- **Tkinter** for the desktop audit interface.
+
+The broader professional workflow that inspired this public reconstruction goes further than the synthetic demo. In that context, the same design pattern has been applied to **recursive folder traversal, ZIP/RAR packages, PDF/XML/TXT evidence, OCR fallback with Tesseract for scanned documents, duplicate control, cross-document validation and audit-ready exception reporting**.
+
+The repository deliberately keeps those production-oriented extensions out of the public sample when they are not needed to demonstrate the core decision logic.
 
 ## Decision logic
 
@@ -158,7 +174,7 @@ This distribution is intentional so the demo can show all four decision paths.
 ├── desktop-demo/
 │   ├── audit_engine.py
 │   ├── desktop_gui.py
-│   ├── desktop_orchestrator.py
+│   ├── workflow_runner.py
 │   ├── generate_demo_data.py
 │   └── workspace_data/
 ├── sample-output/
