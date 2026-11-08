@@ -42,7 +42,7 @@ The repository includes the final edited portfolio walkthrough used to present t
 
 ## Decision logic
 
-~~~text
+```text
 Expected customs record
         │
         ▼
@@ -54,14 +54,16 @@ Locate ZIP archive
 Inspect documentary evidence
         │
         ├── Ambiguous invoice evidence ───► REVIEW
+        │
         ├── Paid declaration missing ─────► INCOMPLETE
+        │
         ├── Expected invoice missing ─────► INCOMPLETE
         │
         ▼
 Critical evidence matched
         │
         └─────────────────────────────────► COMPLETE
-~~~
+```
 
 ## Evidence match
 
@@ -81,7 +83,7 @@ Commercial evidence that exists but cannot be matched confidently is routed to *
 
 Each row represents one audited expediente. The output keeps the determination next to the supporting evidence checks and a concise reason for follow-up.
 
-A sample report is included in [sample-output/](sample-output/).
+A sample report is included in [`sample-output/`](sample-output/).
 
 ## Portfolio result
 
@@ -116,37 +118,79 @@ This distribution is intentional so the demo can show all four decision paths.
 
 ## Architecture
 
-~~~text
-Synthetic audit universe (XLSX / CSV)
-              │
-              ▼
-Compressed record archives (ZIP)
-              │
-              ▼
-Audit engine (classify + match + route)
-              │
-              ▼
-Desktop workflow (Python / Tkinter)
-              │
-              ▼
-Traceable outputs (XLSX / CSV / evidence / logs)
-~~~
+```text
+┌──────────────────────────────┐
+│ Synthetic audit universe     │
+│ XLSX / CSV                  │
+└──────────────┬───────────────┘
+               ▼
+┌──────────────────────────────┐
+│ Compressed record archives   │
+│ ZIP + synthetic evidence     │
+└──────────────┬───────────────┘
+               ▼
+┌──────────────────────────────┐
+│ Audit engine                 │
+│ classify + match + route     │
+└──────────────┬───────────────┘
+               ▼
+┌──────────────────────────────┐
+│ Desktop workflow             │
+│ Python / Tkinter             │
+└──────────────┬───────────────┘
+               ▼
+┌──────────────────────────────┐
+│ Traceable outputs            │
+│ XLSX / CSV / evidence / log  │
+└──────────────────────────────┘
+```
+
+## Project structure
+
+```text
+.
+├── index.html
+├── styles/
+│   └── app.css
+├── docs/media/
+│   ├── electronic-customs-records-auditor-demo.mp4
+│   └── *.webp
+├── desktop-demo/
+│   ├── audit_engine.py
+│   ├── desktop_gui.py
+│   ├── desktop_orchestrator.py
+│   ├── generate_demo_data.py
+│   └── workspace_data/
+├── sample-output/
+├── .github/workflows/pages.yml
+└── README.md
+```
 
 ## Run the desktop reconstruction locally
 
-The public case-study page is static. The repository also includes the Windows desktop reconstruction used for the recorded walkthrough.
+The public case-study page is static, but the repository also includes the Windows desktop reconstruction used for the recorded walkthrough.
 
-From the desktop-demo folder:
+From `desktop-demo/`, install the Python requirements and run:
 
-~~~text
+```text
 RUN_ALL.bat
-~~~
+```
 
 For a lighter local check without producing the full recording:
 
-~~~text
+```text
 RUN_SCREENSHOTS_ONLY.bat
-~~~
+```
+
+## GitHub Pages
+
+The repository includes a GitHub Pages workflow in `.github/workflows/pages.yml`.
+
+Expected public URL:
+
+```text
+https://yospadilla.github.io/electronic-customs-records-auditor-demo/
+```
 
 ## Privacy and intellectual-property boundary
 

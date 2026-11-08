@@ -1,0 +1,2 @@
+# v1.7 recording bootstrap. RUN_ALL.bat installs this automatically when needed.
+imageio-ffmpeg>=0.6
